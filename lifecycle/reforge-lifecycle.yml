@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://status.reforge.com/ + https://github.com/ReforgeHQ (SDK release tags) + https://docs.reforge.com/
+versioning:
+  scheme: semver
+  detail: >-
+    Each first-party SDK is versioned independently with semantic versioning and
+    published to its language registry (npm @reforge-com/*, PyPI sdk-reforge,
+    RubyGems sdk-reforge, Maven com.reforge:sdk, Go module github.com/ReforgeHQ/sdk-go).
+status_page: https://status.reforge.com/
+history_note: >-
+  Reforge Launch is the rebrand of Prefab (prefab.cloud); SDKs retain legacy
+  PREFAB_* environment-variable and datasource aliases for backward compatibility.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No public RFC 8594 deprecation/sunset policy was found at profiling time.
+sla:
+  url: null
+deprecated_operations: []

@@ -1,0 +1,55 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/ReforgeHQ/cli (README) + https://docs.reforge.com/
+name: Reforge CLI
+package: "@reforge-com/cli"
+binary: reforge
+version: 0.0.14
+install:
+- method: npm
+  command: npm install -g @reforge-com/cli
+usage: reforge COMMAND
+commands:
+- name: login
+  summary: Authenticate the CLI with your Reforge account.
+- name: logout
+  summary: Sign the CLI out of your Reforge account.
+- name: whoami
+  summary: Show the currently authenticated identity.
+- name: profile
+  summary: Manage CLI profiles.
+- name: workspace
+  summary: Select or manage the active workspace.
+- name: list
+  summary: List configs / feature flags in the workspace.
+- name: get
+  summary: Get the value of a config or feature flag.
+- name: info
+  summary: Show detailed information about a config or flag.
+- name: create
+  summary: Create a new config or feature flag by NAME.
+- name: set-default
+  summary: Set the default value for a config or flag.
+- name: override
+  summary: Set or clear a personal override for a config or flag.
+- name: schema
+  summary: Manage the schema for a config NAME.
+- name: download
+  summary: Download the current configuration datafile.
+- name: serve
+  summary: Serve configuration locally.
+- name: generate
+  summary: Generate typed code / bindings from configuration.
+- name: generate-new-hex-key
+  summary: Generate a new hex encryption key.
+- name: interactive
+  summary: Run the CLI in interactive mode.
+- name: mcp
+  summary: Configure the Reforge MCP server for your AI assistant (e.g. Claude Code, Codeium).
+key_flows:
+- name: Wire an AI assistant to Reforge
+  steps: [login, mcp]
+- name: Inspect and edit configuration
+  steps: [list, get, info, override, set-default]
+- name: Local development
+  steps: [download, serve, generate]

@@ -1,0 +1,21 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.reforge.com/ + SDK READMEs (github.com/ReforgeHQ)
+standards:
+- id: server-sent-events
+  conforms: true
+  evidence: SDKs subscribe to configuration changes over SSE (enableSSE option).
+- id: semver
+  conforms: true
+  evidence: All first-party SDKs are published to language registries under semantic versions.
+- id: oauth2
+  conforms: false
+  evidence: Authentication is SDK-key based; no OAuth2 authorization surface is documented.
+- id: oidc
+  conforms: false
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public REST/OpenAPI error surface published; SDKs return default values on failure.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: No /.well-known/security.txt served (host returns catch-all redirects).

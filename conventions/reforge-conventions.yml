@@ -1,0 +1,53 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.reforge.com/ + https://github.com/ReforgeHQ/sdk-node (README) + https://github.com/ReforgeHQ/sdk-ruby
+authentication:
+  style: sdk-key
+  backend_env: REFORGE_BACKEND_SDK_KEY
+  detail: authentication/reforge-authentication.yml
+config_delivery:
+  model: pull + subscribe
+  hosts:
+  - https://primary.reforge.com
+  - https://secondary.reforge.com
+  transports:
+  - name: server-sent-events
+    sdk_option: enableSSE
+    description: Real-time push of configuration/flag changes to connected SDKs.
+  - name: polling
+    sdk_option: enablePolling
+    description: Periodic re-fetch of the configuration datafile as an SSE fallback.
+  failover: secondary.reforge.com is used when the primary delivery host is unavailable.
+targeting:
+  concept: context
+  detail: >-
+    Flag and config evaluation takes a user/entity context (a map of attributes
+    grouped by keys) and is evaluated locally in the SDK against rules delivered
+    from the config network. Example calls: reforge.get(name, context, default),
+    reforge.isFeatureEnabled(name, context, false).
+idempotency:
+  supported: false
+  reason: >-
+    The developer-facing surface is read-oriented flag/config evaluation performed
+    locally in the SDK against a delivered datafile; there is no write API with an
+    idempotency-key contract. Configuration mutation happens through the dashboard
+    and CLI, not a public request-idempotent HTTP API.
+dynamic_log_levels:
+  supported: true
+  detail: reforge.shouldLog({loggerName, desiredLevel, defaultLevel, contexts}) / reforge.getLogLevel(loggerName)
+experimentation:
+  supported: true
+  detail: Feature flags support percentage rollouts and audience targeting that back experiments.
+telemetry:
+  host: https://api.reforge.com
+  detail: SDKs report evaluation telemetry back to the Reforge API.
+versioning:
+  scheme: semver (per-SDK); see lifecycle/reforge-lifecycle.yml
+error_handling:
+  model: >-
+    SDKs fall back to caller-supplied default values when configuration cannot be
+    fetched or a key is missing, favoring availability of the host application.
+cross_links:
+  authentication: authentication/reforge-authentication.yml
+  lifecycle: lifecycle/reforge-lifecycle.yml
+  conformance: conformance/reforge-conformance.yml

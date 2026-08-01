@@ -1,0 +1,38 @@
+# Reforge
+
+> Reforge is the company behind Reforge Launch, a developer platform for feature flags, live configuration, dynamic log levels, and experimentation delivered as a service (formerly Prefab). Applications integrate via first-party SDKs (Node, JavaScript, React, Python, Ruby, Go, Java) and a CLI, evaluating flags and configuration against user context with server- and client-side SDK keys. Configuration is delivered over a global network (primary/secondary.reforge.com) with SSE and polling; telemetry flows to api.reforge.com. Backed by a16z and Insight Partners.
+
+## Product
+
+- [Reforge Launch docs](https://docs.reforge.com/): Feature flags, live config, dynamic log levels, experiments.
+- [Get started (5 min)](https://docs.reforge.com/docs/tutorials/get-started): SDK key setup and first flag evaluation.
+- [Node SDK docs](https://docs.reforge.com/docs/sdks/node)
+
+## SDKs & CLI
+
+- [@reforge-com/node (npm)](https://www.npmjs.com/package/@reforge-com/node)
+- [@reforge-com/javascript (npm)](https://www.npmjs.com/package/@reforge-com/javascript)
+- [@reforge-com/react (npm)](https://www.npmjs.com/package/@reforge-com/react)
+- [sdk-reforge (PyPI)](https://pypi.org/project/sdk-reforge/)
+- [sdk-reforge (RubyGems)](https://rubygems.org/gems/sdk-reforge)
+- [com.reforge:sdk (Maven Central)](https://central.sonatype.com/artifact/com.reforge/sdk)
+- [Go SDK](https://pkg.go.dev/github.com/ReforgeHQ/sdk-go)
+- [@reforge-com/cli (npm)](https://www.npmjs.com/package/@reforge-com/cli): ships `reforge mcp` to wire an AI assistant to a workspace.
+
+## Repo artifacts
+
+- [Packages / SDKs](packages/reforge-packages.yml)
+- [CLI command surface](cli/reforge-cli.yml)
+- [MCP server](mcp/reforge-mcp.yml)
+- [Authentication](authentication/reforge-authentication.yml)
+- [API conventions](conventions/reforge-conventions.yml)
+- [Lifecycle](lifecycle/reforge-lifecycle.yml)
+- [Conformance](conformance/reforge-conformance.yml)
+
+## Company
+
+- [Website](https://www.reforge.com/)
+- [GitHub (ReforgeHQ)](https://github.com/ReforgeHQ)
+- [Status](https://status.reforge.com/)
+- [Blog](https://www.reforge.com/blog)
+- [Pricing](https://www.reforge.com/pricing)

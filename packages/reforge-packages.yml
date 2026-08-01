@@ -1,0 +1,75 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.reforge.com/ + public package registries + https://github.com/ReforgeHQ
+packages:
+- language: javascript
+  registry: npm
+  name: "@reforge-com/node"
+  url: https://www.npmjs.com/package/@reforge-com/node
+  install: npm install @reforge-com/node
+  version: 0.1.0
+  official: true
+  repo: https://github.com/ReforgeHQ/sdk-node
+  description: Server-side Node SDK — Feature Flags, Live Config, and Dynamic Log Levels.
+- language: javascript
+  registry: npm
+  name: "@reforge-com/javascript"
+  url: https://www.npmjs.com/package/@reforge-com/javascript
+  install: npm install @reforge-com/javascript
+  version: 0.0.5
+  official: true
+  repo: https://github.com/ReforgeHQ/sdk-javascript
+  description: Browser/client-side JavaScript SDK.
+- language: javascript
+  registry: npm
+  name: "@reforge-com/react"
+  url: https://www.npmjs.com/package/@reforge-com/react
+  install: npm install @reforge-com/react
+  version: 0.0.3
+  official: true
+  repo: https://github.com/ReforgeHQ/sdk-react
+  description: React SDK / provider and hooks for flag and config evaluation.
+- language: python
+  registry: pypi
+  name: sdk-reforge
+  url: https://pypi.org/project/sdk-reforge/
+  install: pip install sdk-reforge
+  version: 1.2.2
+  official: true
+  repo: https://github.com/ReforgeHQ/sdk-python
+  description: Python SDK for Reforge Feature Flags and Config as a Service.
+- language: ruby
+  registry: rubygems
+  name: sdk-reforge
+  url: https://rubygems.org/gems/sdk-reforge
+  install: gem install sdk-reforge
+  version: 1.12.1
+  official: true
+  repo: https://github.com/ReforgeHQ/sdk-ruby
+  description: Ruby SDK — Feature Flags, Live Config as a service.
+- language: java
+  registry: maven-central
+  name: com.reforge:sdk
+  url: https://central.sonatype.com/artifact/com.reforge/sdk
+  install: "implementation 'com.reforge:sdk:1.0.3'"
+  version: 1.0.3
+  official: true
+  repo: https://github.com/ReforgeHQ/sdk-java
+  description: Java SDK (javadoc at https://javadoc.io/doc/com.reforge/sdk).
+- language: go
+  registry: pkg.go.dev
+  name: github.com/ReforgeHQ/sdk-go
+  url: https://pkg.go.dev/github.com/ReforgeHQ/sdk-go
+  install: go get github.com/ReforgeHQ/sdk-go
+  official: true
+  repo: https://github.com/ReforgeHQ/sdk-go
+  description: Go SDK for Reforge.
+- language: javascript
+  registry: npm
+  name: "@reforge-com/cli"
+  url: https://www.npmjs.com/package/@reforge-com/cli
+  install: npm install -g @reforge-com/cli
+  version: 0.0.14
+  official: true
+  repo: https://github.com/ReforgeHQ/cli
+  description: Reforge command-line interface (binary; command surface catalogued in cli/reforge-cli.yml).

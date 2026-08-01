@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.reforge.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 16 12:01:46 2026 GMT
+  hsts: true
+  hsts_max_age: 0
+- host: docs.reforge.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 27 23:17:48 2026 GMT
+  hsts: false
+- host: primary.reforge.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 11 23:32:54 2026 GMT
+  hsts: false
+domains:
+- domain: reforge.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: quarantine

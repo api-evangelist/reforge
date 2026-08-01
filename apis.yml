@@ -1,27 +1,122 @@
 aid: reforge
 name: Reforge
-description: Reforge is a company surfaced as a portfolio company of a16z, insight-partners and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Reforge is the company behind Reforge Launch, a developer platform for feature
+  flags, live configuration, dynamic log levels, and experimentation delivered as
+  a service (the product formerly known as Prefab). Applications integrate Reforge
+  through first-party SDKs for Node, JavaScript, React, Python, Ruby, Go, and Java
+  plus a command-line interface, evaluating flags and configuration against user
+  context with server- and client-side SDK keys. Configuration is delivered over a
+  global content network (primary/secondary.reforge.com) with server-sent events
+  and polling for real-time updates, while telemetry flows to api.reforge.com.
+  Reforge is backed by a16z and Insight Partners.
 url: https://raw.githubusercontent.com/api-evangelist/reforge/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/24498216?v=4
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - a16z
 - insight-partners
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: developer-platform-enriched
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Feature Flags
+- Feature Management
+- Dynamic Configuration
+- Live Config
+- Experimentation
+- Developer Tools
+- SDK
+- Observability
+apis:
+- name: Reforge Launch
+  description: >-
+    Reforge Launch delivers feature flags, live configuration, dynamic log levels,
+    and experiments through first-party SDKs and a CLI. SDKs fetch configuration
+    from a global delivery network and evaluate flags locally against user context,
+    with server-sent events and polling for real-time updates and telemetry sent
+    back to the Reforge API.
+  humanURL: https://docs.reforge.com/
+  baseURL: https://primary.reforge.com
+  properties:
+  - type: Documentation
+    url: https://docs.reforge.com/
+  - type: GettingStarted
+    url: https://docs.reforge.com/docs/tutorials/get-started
+  - type: Authentication
+    url: authentication/reforge-authentication.yml
+  - type: Conventions
+    url: conventions/reforge-conventions.yml
+  - type: Lifecycle
+    url: lifecycle/reforge-lifecycle.yml
+  - type: Conformance
+    url: conformance/reforge-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 common:
+- type: DomainSecurity
+  url: security/reforge-domain-security.yml
 - type: Website
   url: https://www.reforge.com/
+- type: DeveloperPortal
+  url: https://docs.reforge.com/
+- type: Documentation
+  url: https://docs.reforge.com/
+- type: GettingStarted
+  url: https://docs.reforge.com/docs/tutorials/get-started
+- type: GitHubOrganization
+  url: https://github.com/ReforgeHQ
+- type: StatusPage
+  url: https://status.reforge.com/
+- type: Blog
+  url: https://www.reforge.com/blog
+- type: Pricing
+  url: https://www.reforge.com/pricing
+- type: Login
+  url: https://www.reforge.com/login
+- type: TermsOfService
+  url: https://www.reforge.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.reforge.com/privacy-policy
+- type: Packages
+  url: packages/reforge-packages.yml
+- type: SDKs
+  url: packages/reforge-packages.yml
+- type: CLI
+  url: cli/reforge-cli.yml
+- type: MCPServer
+  url: mcp/reforge-mcp.yml
+- type: Authentication
+  url: authentication/reforge-authentication.yml
+- type: Conventions
+  url: conventions/reforge-conventions.yml
+- type: Lifecycle
+  url: lifecycle/reforge-lifecycle.yml
+- type: Conformance
+  url: conformance/reforge-conformance.yml
+- type: LLMsTxt
+  url: llms/reforge-llms.txt
