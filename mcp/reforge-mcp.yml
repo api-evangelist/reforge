@@ -5,20 +5,21 @@ source: https://github.com/ReforgeHQ/cli (README, `reforge mcp` command)
 server:
   name: reforge
   transport: stdio
-  provided_by: "@reforge-com/cli"
+  provided_by: '@reforge-com/cli'
   launch: reforge mcp
-  description: >-
-    The Reforge CLI ships an MCP server that connects an AI assistant to a
-    Reforge workspace. `reforge mcp` configures the server for a supported
-    editor/assistant (e.g. Claude Code, Codeium), letting the agent read and
-    manage feature flags and configuration through the CLI's authenticated
+  description: The Reforge CLI ships an MCP server that connects an AI assistant to a Reforge workspace.
+    `reforge mcp` configures the server for a supported editor/assistant (e.g. Claude Code, Codeium),
+    letting the agent read and manage feature flags and configuration through the CLI's authenticated
     session.
   editors:
   - claude-code
   - codeium
-notes: >-
-  The MCP server is delivered through the first-party CLI rather than as a
-  separate hosted/remote endpoint; install the CLI (npm install -g
-  @reforge-com/cli), run `reforge login`, then `reforge mcp` to wire it into an
-  assistant. Tool surface is derived from the CLI's config/flag command set
-  (list, get, info, create, set-default, override, schema).
+notes: The MCP server is delivered through the first-party CLI rather than as a separate hosted/remote
+  endpoint; install the CLI (npm install -g @reforge-com/cli), run `reforge login`, then `reforge mcp`
+  to wire it into an assistant. Tool surface is derived from the CLI's config/flag command set (list,
+  get, info, create, set-default, override, schema).
+deployment:
+  mode: local-stdio
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
